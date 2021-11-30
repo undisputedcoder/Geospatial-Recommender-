@@ -17,6 +17,7 @@ namespace Assignment_2
     /// <summary>
     /// Interaction logic for SignUp.xaml
     /// </summary>
+    
     public partial class SignUp : Window
     {
         private CollaboratorDB CDB;
@@ -26,7 +27,7 @@ namespace Assignment_2
             CDB = new CollaboratorDB();
         }
 
-        //display value of slider in textbox
+        /*display value of slider in textbox
         private void svalue_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             int val = Convert.ToInt32(e.NewValue);
@@ -58,6 +59,6 @@ namespace Assignment_2
             mobile.Text = "";
             sliderValue.Text = "";
             instagram.Text = "";
-        }
+        }*/
     }
 }
