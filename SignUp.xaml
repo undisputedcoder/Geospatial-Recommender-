@@ -5,37 +5,113 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assignment_2"
         mc:Ignorable="d"
-        Title="Collaborator Sign Up" Height="450" Width="675.446">
+        Title="Collaborator Sign Up" Height="550" Width="450">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="newbackground.jpg"/>
         </Grid.Background>
-        <Button x:Name="SignUp1" Content="Sign Up" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Margin="285,350,0,0" Width="95" Height="25" VerticalAlignment="Top" Click="SignUp1_Click" >
-        </Button>
-        <TextBox x:Name="firstName" HorizontalAlignment="Left" Height="23" Margin="198,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="321"/>
-        <Label Content="Firstname" HorizontalAlignment="Left" Margin="112,72,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="lastName" HorizontalAlignment="Left" Height="23" Margin="198,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="321"/>
-        <Label Content="Lastname" HorizontalAlignment="Left" Margin="114,100,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="state" HorizontalAlignment="Left" Margin="198,131,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Content="WA"/>
-            <ComboBoxItem Content="SA"/>
-            <ComboBoxItem Content="NT"/>
-            <ComboBoxItem Content="NSW"/>
-            <ComboBoxItem Content="VIC"/>
-            <ComboBoxItem Content="QLD"/>
+
+        <Grid Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBox x:Name="firstName" Grid.Column="1" Grid.Row="2" Height="25" Margin="2" Grid.RowSpan="2"/>
+            <Label Grid.Column="1" Grid.Row="1" Content="Firstname"/>
+
+            <TextBox x:Name="lastName" Grid.Column="2" Grid.Row="2" Height="25" Margin="2" Grid.RowSpan="2"/>
+            <Label Grid.Column="2" Grid.Row="1" Content="Lastname" />
+        </Grid>
+        
+        <Label Grid.Column="1" Grid.Row="2" Content="Email" />
+        <TextBox x:Name="email" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Height="25" Margin="2"/>
+
+        <Label Grid.Column="1" Grid.Row="4" Content="Mobile"/>
+        <TextBox x:Name="mobile" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Height="25" Margin="2"/>
+
+        <Grid Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <TextBox Grid.Column="1" Grid.Row="2" Margin="2" Height="25"/>
+            <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Content="Date of Birth" />
+            
+            <ComboBox x:Name="gender" Grid.Column="2" Grid.Row="2" Height="25" Margin="4,0,0,0">
+                <ComboBoxItem Content="Male"/>
+                <ComboBoxItem Content="Female"/>
+            </ComboBox>
+            <Label Grid.Column="2" Grid.Row="1" Content="Gender" />
+        </Grid>
+
+        <Label Grid.Column="1" Grid.Row="10" Content="Your Profile" FontWeight="Medium"/>
+        <Label Grid.Column="1" Grid.Row="11" Content="Availability" />
+        <CheckBox Grid.Column="1" Grid.Row="12" Content="Weekdays (Mon-Fri)" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <CheckBox Grid.Column="1" Grid.Row="13" Content="Weekends (Sat &amp; Sun)" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <Label Grid.Column="1" Grid.Row="14" Content="Location" />
+        <TextBox Grid.Column="1" Grid.Row="15" Height="25"/>
+
+        <ComboBox x:Name="distance" Grid.Column="1" Grid.Row="17" Height="25">
+            <ComboBoxItem Content="&lt;10 km"/>
+            <ComboBoxItem Content="&lt;20 km"/>
+            <ComboBoxItem Content="&lt;30 km"/>
+            <ComboBoxItem Content="&lt;40 km"/>
+            <ComboBoxItem Content="&lt;50 km"/>
         </ComboBox>
-        <Label Content="State" HorizontalAlignment="Left" Margin="135,127,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="location" HorizontalAlignment="Left" Height="23" Margin="198,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="321"/>
-        <Label Content="Location" HorizontalAlignment="Left" Margin="121,155,0,0" VerticalAlignment="Top"/>
-        <Label Content="Email" HorizontalAlignment="Left" Margin="136,183,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="email" HorizontalAlignment="Left" Height="23" Margin="198,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="321"/>
-        <TextBox x:Name="mobile" HorizontalAlignment="Left" Height="23" Margin="198,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="321"/>
-        <Label Content="Mobile Phone" HorizontalAlignment="Left" Margin="90,211,0,0" VerticalAlignment="Top"/>
-        <Label Content="Select the maximum distance" HorizontalAlignment="Left" Margin="13,244,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.186,0.295"/>
-        <TextBox x:Name="sliderValue" Text="{Binding ElementName=slValue, Path=Value, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="20" Margin="479,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40"/>
-        <Slider Name="svalue" HorizontalAlignment="Left" Margin="198,248,0,0" VerticalAlignment="Top" Width="275" ValueChanged="svalue_ValueChanged" Maximum="50" TickFrequency="2"/>
-        <Label Content="km" HorizontalAlignment="Left" Margin="523,244,0,0" VerticalAlignment="Top"/>
-        <Label Content="Instagram username&#xD;&#xA;" HorizontalAlignment="Left" Margin="58,284,0,0" VerticalAlignment="Top" Height="26"/>
-        <TextBox x:Name="instagram" HorizontalAlignment="Left" Height="23" Margin="198,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="321"/>
+        <Label Grid.Column="1" Grid.Row="16" Content="Distance" />
+        
+        <Button Grid.Column="1" Grid.Row="18" Grid.RowSpan="2" Content="Sign Up" Height="30" Margin="0,5,0,0" Background="#FF8B44F1" Foreground="White" FontSize="14"/>
     </Grid>
 </Window>
