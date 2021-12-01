@@ -5,35 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assignment_2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="700">
+        Title="MainWindow" Height="350" Width="550">
 
-    <Grid OpacityMask="#FFF2EEE8" Margin="0,0,2,0">
-        <Grid.Background>
-            <ImageBrush ImageSource="newbackground.jpg"/>
-        </Grid.Background>
+    <Grid Style="{StaticResource BackgroundStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="0*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <Button x:Name="SignUp" Content="Sign Up" Style="{StaticResource ButtonStyle}" Click="SignUp_Click" Margin="297,132,0,0" HorizontalAlignment="Left" Width="90" Height="35" VerticalAlignment="Top" />
-        <Button x:Name="DiscordButton" HorizontalAlignment="Left" Margin="297,225,0,0" VerticalAlignment="Top"  Width="90" Height="35" Background="#FF7289DA" BorderBrush="{x:Null}" Foreground="White" Click="DiscordButton_Click">
-            <StackPanel Orientation="Horizontal">
-                <Image Source="discord.png" Width="20" Height="20"/>
-                <TextBlock Text="Discord"/>
-            </StackPanel>
-        </Button>
-        <Button x:Name="InstagramButton" HorizontalAlignment="Left" Margin="297,288,0,0" VerticalAlignment="Top"  Width="90" Height="35" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="instagrambackground.jpg"/>
-            </Button.Background>
-            <StackPanel Orientation="Horizontal">
-                <Image Source="insta.png" Width="15" Height="15"/>
-                <TextBlock Text="Instagram"/>
-            </StackPanel>
-        </Button>
-        <TextBox x:Name ="txtbox2" HorizontalAlignment="Left" Height="23" Margin="326,265,0,0" TextWrapping="Wrap" Text="or" VerticalAlignment="Top" Width="28" Background="{x:Null}" Foreground="#FF5D5858" TextAlignment="Center" BorderBrush="{x:Null}"/>
-        <TextBlock HorizontalAlignment="Left" Margin="181,180,0,0" TextWrapping="Wrap" Text="Send messages to collaborators or retrieve messages from collaborator either with" VerticalAlignment="Top" Height="40" Width="327" Foreground="#FF494949" TextAlignment="Center"/>
-        <TextBlock HorizontalAlignment="Left" Margin="230,104,0,0" TextWrapping="Wrap" Text="Sign up to be a collaborator here" VerticalAlignment="Top" Width="221" Height="20" TextAlignment="Center" Foreground="#FF575757"/>
-        <TextBlock x:Name="title" HorizontalAlignment="Left" Margin="132,47,0,0" TextWrapping="Wrap" Text="Welcome to the Cognitive Safety Net" VerticalAlignment="Top" Width="430" Height="40" FontSize="24" TextAlignment="Center"/>
+
+        <!-- Title -->
+        <TextBlock x:Name="title" Grid.Column="1" Grid.Row="1" Text="Welcome to the Cognitive Safety Net" Width="430" Height="40" FontSize="24" FontWeight="DemiBold"/>
+        
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="Sign up to be a collaborator" Style="{StaticResource Text}"/>
+
+        <!-- Sign Up -->
+        <Button x:Name="SignUp" Content="Sign Up" Grid.Column="1" Grid.Row="3" Style="{StaticResource ButtonStyle}" Click="SignUp_Click" Width="160" Height="35" />
+
+        <TextBlock Grid.Column="1" Grid.Row="4" Text="Send a message for collaborators to see on" Style="{StaticResource Text}"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="DiscordButton" Width="120" Height="35" Background="#FF7289DA" BorderBrush="{x:Null}" Foreground="White" Click="DiscordButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="discord.png" Width="20" Height="20"/>
+                    <TextBlock Text="Discord" FontWeight="DemiBold"/>
+                </StackPanel>
+            </Button>
+
+            <TextBlock Text="OR" VerticalAlignment="Center" Margin="10"/>
+
+            <Button x:Name="InstagramButton" Width="120" Height="35" BorderBrush="{x:Null}" Background="#FFF581AB" Foreground="White" Click="Button_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="instagram.png" Width="20" Height="20"/>
+                    <TextBlock Text="Instagram" FontWeight="DemiBold"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>   
