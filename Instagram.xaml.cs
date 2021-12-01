@@ -53,7 +53,7 @@ namespace Assignment_2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Login(ig.Text, directMessage.Text);
+            //Login(ig.Text, directMessage.Text);
             MessageBox.Show("Message Sent!");
         }
     }

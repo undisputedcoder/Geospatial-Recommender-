@@ -25,7 +25,7 @@
 
         <!-- Title -->
         <TextBlock x:Name="title" Grid.Column="1" Grid.Row="1" Text="Welcome to the Cognitive Safety Net" Width="430" Height="40" FontSize="24" FontWeight="DemiBold"/>
-        
+
         <TextBlock Grid.Column="1" Grid.Row="2" Text="Sign up to be a collaborator" Style="{StaticResource Text}"/>
 
         <!-- Sign Up -->
@@ -43,10 +43,13 @@
 
             <TextBlock Text="OR" VerticalAlignment="Center" Margin="10"/>
 
-            <Button x:Name="InstagramButton" Width="120" Height="35" BorderBrush="{x:Null}" Background="#FFF581AB" Foreground="White" Click="Button_Click">
+            <Button x:Name="InstagramButton" Width="120" Height="35" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="insta-bg.jpg"/>
+                </Button.Background>
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="instagram.png" Width="20" Height="20"/>
-                    <TextBlock Text="Instagram" FontWeight="DemiBold"/>
+                    <Image Source="insta-clear.png" Width="20" Height="20" Margin="5"/>
+                    <TextBlock Text="Instagram" FontWeight="DemiBold" VerticalAlignment="Center"/>
                 </StackPanel>
             </Button>
         </StackPanel>
