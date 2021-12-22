@@ -9,11 +9,6 @@ Download the project and run it on Visual Studio as normal. Ensure you have at l
 You would need to create your own account in each of the social media platforms to enable the messaging feature.
 
 ## Example
-### Initial Window
-The initial window when running the application.
-
-
-![Example](screenshots/Screenshot%201.png)
 
 ### Sign Up 
 The sign up window for a potential collaborator to enter their details and level of support.
